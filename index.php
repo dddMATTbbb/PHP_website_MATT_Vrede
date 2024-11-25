@@ -17,54 +17,23 @@
 
     <ul class="list">
         <li class="list-item active">
-            <a href="#">
+            <a href="spel.php">
                <i class='bx bx-grid-alt' ></i>
-               <span class="link-name" style="--i:1;">Dashboard</span>
+               <span class="link-name" style="--i:1;">Spel</span>
             </a>
         </li>
         <li class="list-item">
-            <a href="#">
+            <a href="credits.php">
                <i class='bx bx-user' ></i>
-               <span class="link-name" style="--i:2;">User</span> 
+               <span class="link-name" style="--i:2;">Credits</span> 
             </a>
         </li>
         <li class="list-item">
-            <a href="#">
+            <a href="settings.php">
                <i class='bx bx-chat' ></i>
-               <span class="link-name" style="--i:3;">Messages</span> 
+               <span class="link-name" style="--i:3;">Settings</span> 
             </a>
         </li>
-        <li class="list-item">
-            <a href="#">
-               <i class='bx bx-pie-chart-alt-2' ></i>
-               <span class="link-name" style="--i:4;">Analytics</span> 
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="#">
-               <i class='bx bx-folder' ></i>
-               <span class="link-name" style="--i:5;">Manager</span> 
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="#">
-               <i class='bx bx-cart-alt' ></i>
-               <span class="link-name" style="--i:6;">Order</span> 
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="#">
-               <i class='bx bx-heart' ></i>
-               <span class="link-name" style="--i:7;">Saved</span> 
-            </a>
-        </li>
-        <li class="list-item">
-            <a href="#">
-               <i class='bx bx-cog' ></i>
-               <span class="link-name" style="--i:8;">Setting</span> 
-            </a>
-        </li>
-
     </ul>
 </nav>
 
