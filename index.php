@@ -18,7 +18,7 @@
     <ul class="list">
         <li class="list-item active">
             <a href="spel.php">
-               <i class='bx bx-grid-alt' ></i>
+                <i class='bx bx-game'></i>
                <span class="link-name" style="--i:1;">Spel</span>
             </a>
         </li>
