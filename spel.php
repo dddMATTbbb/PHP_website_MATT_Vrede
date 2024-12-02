@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION["aantalAppel"])) {
-        $_SESSION["aantalAppel"] = 0;
-    }
+    $_SESSION["aantalAppel"] = 0;
+
+
     $aantalAppel = $_SESSION["aantalAppel"];
 ?>
 <!DOCTYPE html>
@@ -34,32 +34,14 @@
                 case "5": echo "<img src='img/watermeloen.jpg'>" ; break;
             }
         }
-        $_SESSION["aantalAppels"] = $aantalAppel;
+        $_SESSION["aantalAppel"] = $aantalAppel;
         echo $_SESSION['aantalAppel'];
-
-        if (isset($_POST["verzend"]))
-        {
-            $_SESSION["aantalAppel"] = $aantalAppel;
-            $userAppel = $_POST["aantal-appel"];
-
-            if ($userAppel == $_SESSION["aantalAppel"])
-            {
-                echo "correct";
-                session_destroy();
-            }
-            else
-            {
-                echo "incorrect<br>";
-                echo "user: $userAppel echte: " . $_SESSION["aantalAppel"];
-                session_destroy();
-            }
-        }
     ?>
-        <form action="spel.php" method="post">
-            hoeveel appel: <input type="number" name="aantal-appel" /><br /> 
-            <input type="submit" name="verzend" value="check" />
-        </form>
     </div>
-
+    <script>
+        setTimeout(() => {
+            window.location.href = "resultaten-fruit.php";
+            }, 5000); // Redirects after 5 seconds
+    </script>
 </body>
 </html>
