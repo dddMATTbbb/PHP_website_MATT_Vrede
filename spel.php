@@ -2,9 +2,17 @@
     session_start();
 
     $_SESSION["aantalAppel"] = 0;
+    $_SESSION["aantalBanaan"] = 0;
+    $_SESSION["aantalPeer"] = 0;
+    $_SESSION["aantalSinaasappel"] = 0;
+    $_SESSION["aantalWatermeloen"] = 0;
 
 
     $aantalAppel = $_SESSION["aantalAppel"];
+    $aantalBanaan = $_SESSION["aantalBanaan"];
+    $aantalPeer = $_SESSION["aantalPeer"];
+    $aantalSinaasappel = $_SESSION["aantalSinaasappel"];
+    $aantalWatermeloen = $_SESSION["aantalWatermeloen"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +25,6 @@
 <body>
     <div class="header">
         <h1>MemoryLane</h1>
-        <ul>
-            <li><a href="index.php">home</a></li>
-        </ul>
     </div>
     <div class="main">
     <?php
@@ -28,13 +33,17 @@
             switch("$plaatje")
             {
                 case "1": echo "<img src='img/appel.jpg'>"; $aantalAppel++; break;
-                case "2": echo "<img src='img/banaan.jpg'>"; break;
-                case "3": echo "<img src='img/peer.jpg'>";  break;
-                case "4": echo "<img src='img/sinaasappel.jpg'>"; break;
-                case "5": echo "<img src='img/watermeloen.jpg'>" ; break;
+                case "2": echo "<img src='img/banaan.jpg'>"; $aantalBanaan++; break;
+                case "3": echo "<img src='img/peer.jpg'>"; $aantalPeer++; break;
+                case "4": echo "<img src='img/sinaasappel.jpg'>"; $aantalSinaasappel++; break;
+                case "5": echo "<img src='img/watermeloen.jpg'>" ; $aantalWatermeloen++; break;
             }
         }
         $_SESSION["aantalAppel"] = $aantalAppel;
+        $_SESSION["aantalBanaan"] = $aantalBanaan;
+        $_SESSION["aantalPeer"] = $aantalPeer;
+        $_SESSION["aantalSinaasappel"] = $aantalSinaasappel;
+        $_SESSION["aantalWatermeloen"] = $aantalWatermeloen;
         echo $_SESSION['aantalAppel'];
     ?>
     </div>

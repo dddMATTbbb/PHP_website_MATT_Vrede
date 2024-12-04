@@ -1,7 +1,14 @@
 <?php
     session_start();
     $aantalAppel = $_SESSION["aantalAppel"];
+    $aantalBanaan = $_SESSION["aantalBanaan"];
+    $aantalPeer = $_SESSION["aantalPeer"];
+    $aantalSinaasappel = $_SESSION["aantalSinaasappel"];
+    $aantalWatermeloen = $_SESSION["aantalWatermeloen"];
 ?>
+<script>
+    console.log(<?= json_encode($aantalAppel); ?>);
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,25 +28,64 @@
         <form action="" method="post">
             Aantal appels: <input type="number" name="userAppels" required /><br>
             Aantal bananen: <input type="number" name="userBananen" required /><br>
-            Aantal peren: <input type="number" name="userPeren" required /><br>
-            Aantal sinaasappels: <input type="number" name="userSinaasappels" required /><br>
-            Aantal watermeloen: <input type="number" name="userAppels" required /><br>
+            Aantal Peren: <input type="number" name="userPeren" required /><br>
+            Aantal Sinaasappels: <input type="number" name="userSinaasappels" required /><br>
+            Aantal Watermeloen: <input type="number" name="userWatermeloen" required /><br>
             <input type="submit" name="verzend" value="Check" />
         </form>
     </div>
     <?php
     if (isset($_POST["verzend"]))
     {
-        $echteAppels = $_SESSION["aantalAppel"];
         $userAppels = $_POST["userAppels"];
+        $userBananen = $_POST["userBananen"];
+        $userPeren = $_POST["userPeren"];
+        $userSinaasappels = $_POST["userSinaasappels"];
+        $userWatermeloen = $_POST["userWatermeloen"];
 
         if ($aantalAppel == $userAppels)
         {
-            echo "correct, jij had: $userAppels echt aantal: $aantalAppel";
+            echo "Appel: correct, jij had: $userAppels echt aantal: $aantalAppel<br>";
         }
         else
         {
-            echo "incorrect, jij had: $userAppels echt aantal: $aantalAppel";
+            echo "Appel: incorrect, jij had: $userAppels echt aantal: $aantalAppel<br>";
+        }
+
+        if($aantalBanaan == $userBananen)
+        {
+            echo "Banaan: correct, jij had: $userBananen echt aantal: $aantalBanaan<br>";
+        }
+        else
+        {
+            echo "Banaan: incorrect, jij had: $userBananen echt aantal: $aantalBanaan<br>";
+        }
+
+        if($aantalPeer == $userPeren)
+        {
+            echo "Peer: correct, jij had: $userPeren echt aantal: $aantalPeer<br>";
+        }
+        else
+        {
+            echo "Peer: incorrect, jij had: $userPeren echt aantal: $aantalPeer<br>";
+        }
+
+        if($aantalSinaasappel == $userSinaasappels)
+        {
+            echo "Sinaasappel: correct, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
+        }
+        else
+        {
+            echo "Sinaasappel: incorrect, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
+        }
+
+        if($aantalWatermeloen == $userWatermeloen)
+        {
+            echo "Sinaasappel: correct, jij had: $userWatermeloen echt aantal: $aantalWatermeloen<br>";
+        }
+        else
+        {
+            echo "Sinaasappel: incorrect, jij had: $userWatermeloen echt aantal: $aantalWatermeloen<br>";
         }
     }
     
