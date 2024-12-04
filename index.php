@@ -17,21 +17,34 @@
 
     <ul class="list">
         <li class="list-item active">
+            <a href="credits.php">
+                <i class='bx bx-buildings' style='color:#ffffff'  ></i>
+               <span class="link-name" style="--i:1;">Menu</span> 
+            </a>
+        </li>
+        <li class="list-item">
             <a href="uitleg-spel-fruit.php">
                 <i class='bx bx-game'></i>
-               <span class="link-name" style="--i:1;">Spel</span>
+               <span class="link-name" style="--i:2;">Fruitje</span>
+            </a>
+        </li>
+        
+        <li class="list-item">
+            <a href="Numpje.php">
+                <i class='bx bx-ghost'></i>
+               <span class="link-name" style="--i:3;">Numpje</span>
             </a>
         </li>
         <li class="list-item">
             <a href="credits.php">
                <i class='bx bx-user' ></i>
-               <span class="link-name" style="--i:2;">Credits</span> 
+               <span class="link-name" style="--i:4;">Credits</span> 
             </a>
         </li>
         <li class="list-item">
             <a href="settings.php">
                <i class='bx bx-chat' ></i>
-               <span class="link-name" style="--i:3;">Settings</span> 
+               <span class="link-name" style="--i:5;">Settings</span> 
             </a>
         </li>
     </ul>
