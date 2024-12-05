@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultaten fruit</title>
-    <link rel="stylesheet" href="spel-styles.css">
+    <link rel="stylesheet" href="fruit-styles.css">
 </head>
 <body>
     <div class="header">
