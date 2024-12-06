@@ -1,0 +1,69 @@
+/* Algemene instellingen */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rastercontainer */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Vier kolommen */
+    grid-gap: 10px; /* Ruimte tussen boxen */
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Boxstijl */
+.box {
+    background-color: lightblue;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px; /* Zorgt dat tekst gecentreerd is */
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+/* Berichtstijl */
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+/* Formulierstijl */
+form {
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.error {
+    color: red;
+}
