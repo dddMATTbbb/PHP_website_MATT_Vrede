@@ -12,8 +12,8 @@
     </div>
     <div class="uitleg">
         <h1>Fruit tellen</h1>
-        <p>In dit spel daait alles om je geheugen en oplettendheid! Hier is hoe het werkt:</p><br><br>
-        <ul>
+        <h3>In dit spel daait alles om je geheugen en oplettendheid! Hier is hoe het werkt:</h3><br><br>
+        <ol type="1">
             <li>Start spel:</li>
             <p>
                 Je krijgt een scherm te zien met 30 plaatjes. De plaatjes bestaan uit vijf verschillende soorten fruit:
@@ -36,8 +36,8 @@
                 Het spel controleerd je antwoorden: je ziet welke fruit soorten je goed had en welke fout.<br>
                 Ook krijg je te zien wat het juiste antwoord was.
             </p>
-        </ul>
+        </ol>
+        <a href="spel.php"><button>Verder</button></a>
     </div>
-    <a href="spel.php">verder</a>
 </body>
 </html>
