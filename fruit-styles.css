@@ -53,3 +53,10 @@
 .uitleg a{
     margin-top: 35px;
 }
+
+.uitleg a button{
+    background-color: lightblue;
+    width: 150%;
+    font-size: 1.5rem;
+    border: solid, blue, 3px;
+}
