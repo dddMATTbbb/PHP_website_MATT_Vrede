@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    
+    if (!isset($_SESSION["fruit-diff"]))
+    {
+        $_SESSION["fruit-diff"] = "medium";
+    }
+
+    if (!isset($_SESSION["numpy-diff"]))
+    {
+        $_SESSION["numpy-diff"] = "medium";
+    }
+?>
+<script>
+    console.log(<?= json_encode($_SESSION["fruit-diff"]); ?>);
+</script>
 <!DOCTYPE html>
 <html lang="nl">
 <head>

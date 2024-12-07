@@ -7,7 +7,7 @@
     $aantalWatermeloen = $_SESSION["aantalWatermeloen"];
 ?>
 <script>
-    console.log(<?= json_encode($aantalAppel); ?>);
+    console.log(<?= json_encode($_SESSION["fruit-diff"]); ?>);
 </script>
 <!DOCTYPE html>
 <html lang="en">

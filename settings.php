@@ -9,7 +9,16 @@
     {
         $_SESSION["numpy-diff"] = "medium";
     }
+
+    if(isset($_POST["verzend"]))
+    {
+        $_SESSION["fruit-diff"] = $_POST["user-fruit-diff"];
+        $_SESSION["numpy-diff"] = $_POST["user-numpy-diff"];
+    }
 ?>
+<script>
+    console.log(<?= json_encode($_SESSION["fruit-diff"]); ?>);
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +35,7 @@
         </ul>
     </div>
     <div class="main">
-        <form action="" method="POST">
+        <form method="POST">
             <h2>Choose Fruit difficulty</h2>
             <select name="user-fruit-diff">
                 <option value="easy">Easy</option>
@@ -38,15 +47,10 @@
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
-            </select>
+            </select><br><br>
             <input type="submit" name="verzend" value="Opslaan" />
         </form>
         <?php
-            if(isset($_POST["verzend"]))
-            {
-                $_SESSION["fruit-diff"] = $_POST["user-fruit-diff"];
-                $_SESSION["numpy-diff"] = $_POST["user-numpy-diff"];
-            }
             echo "Fruitje: " . $_SESSION["fruit-diff"] . "<br>";
             echo "Numpy: " . $_SESSION["numpy-diff"] . "<br>";
         ?>

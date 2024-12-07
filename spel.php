@@ -13,7 +13,29 @@
     $aantalPeer = $_SESSION["aantalPeer"];
     $aantalSinaasappel = $_SESSION["aantalSinaasappel"];
     $aantalWatermeloen = $_SESSION["aantalWatermeloen"];
+
+    $aantalPlaatjes = 19;
+
+    if ($_SESSION["fruit-diff"] == "easy")
+    {
+        $aantalPlaatjes = 9;
+    }
+    elseif($_SESSION["fruit-diff"] == "medium")
+    {
+        $aantalPlaatjes = 19;
+    }
+    elseif($_SESSION["fruit-diff"] == "hard")
+    {
+        $aantalPlaatjes = 29;
+    }
+    else
+    {
+        $aantalPlaatjes = 19;
+    }
 ?>
+<script>
+    console.log(<?= json_encode($_SESSION["fruit-diff"]); ?>);
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +50,7 @@
     </div>
     <div class="main">
     <?php
-        for($x = 0; $x <= 29; $x++){
+        for($x = 0; $x <= $aantalPlaatjes; $x++){
             $plaatje = rand(1,5);
             switch("$plaatje")
             {
