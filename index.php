@@ -59,7 +59,7 @@
         </li>
         <li class="list-item">
             <a href="settings.php">
-               <i class='bx bx-chat' ></i>
+                <i class='bx bx-cog'></i>
                <span class="link-name" style="--i:5;">Settings</span> 
             </a>
         </li>
