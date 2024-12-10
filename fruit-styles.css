@@ -60,3 +60,18 @@
     font-size: 1.5rem;
     border: solid, blue, 3px;
 }
+
+.main .resultaten-fruitje{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.main .resultaten-fruitje input[name="verzend"] {
+    margin-top: 15px;
+    border: solid, 2px, red;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}

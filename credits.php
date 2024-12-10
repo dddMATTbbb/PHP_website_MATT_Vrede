@@ -33,4 +33,7 @@
         <h2>Locatie , Vijzelaan</h2>
         <p>Havo</p>
     </div>
+    <div class="terug-button">
+        <a href="index.php"><button>Home</button></a>
+    </div>
 </body>

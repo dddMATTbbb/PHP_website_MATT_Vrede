@@ -25,14 +25,16 @@
         </ul>
     </div>
     <div class="main">
-        <form action="" method="post">
-            Aantal appels: <input type="number" name="userAppels" required /><br>
-            Aantal bananen: <input type="number" name="userBananen" required /><br>
-            Aantal Peren: <input type="number" name="userPeren" required /><br>
-            Aantal Sinaasappels: <input type="number" name="userSinaasappels" required /><br>
-            Aantal Watermeloen: <input type="number" name="userWatermeloen" required /><br>
-            <input type="submit" name="verzend" value="Check" />
-        </form>
+        <div class="resultaten-fruitje">
+            <form action="" method="post">
+                Aantal appels: <input type="number" name="userAppels" required /><br>
+                Aantal bananen: <input type="number" name="userBananen" required /><br>
+                Aantal Peren: <input type="number" name="userPeren" required /><br>
+                Aantal Sinaasappels: <input type="number" name="userSinaasappels" required /><br>
+                Aantal Watermeloen: <input type="number" name="userWatermeloen" required /><br>
+                <input type="submit" name="verzend" value="Check" />
+            </form>
+        </div>
     </div>
     <?php
     if (isset($_POST["verzend"]))
@@ -45,7 +47,7 @@
 
         if ($aantalAppel == $userAppels)
         {
-            echo "Appel: correct, jij had: $userAppels echt aantal: $aantalAppel<br>";
+            echo "Appel: correct, jij had: $userAppels echt aantal: $aantalAppel</p><br>";
         }
         else
         {
@@ -72,11 +74,11 @@
 
         if($aantalSinaasappel == $userSinaasappels)
         {
-            echo "Sinaasappel: correct, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
+            echo "<style>color: green;</style>Sinaasappel: correct, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
         }
         else
         {
-            echo "Sinaasappel: incorrect, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
+            echo "<style>color: red;</style>Sinaasappel: incorrect, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
         }
 
         if($aantalWatermeloen == $userWatermeloen)

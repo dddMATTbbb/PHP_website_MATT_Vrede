@@ -9,6 +9,9 @@
 <body>
     <div class="header">
         <h1>MemoryLane</h1>
+        <ul>
+            <li><a href="index.php">home</a></li>
+        </ul>
     </div>
     <div class="uitleg">
         <h1>Fruit tellen</h1>
