@@ -51,8 +51,8 @@
             <input type="submit" name="verzend" value="Opslaan" />
         </form>
         <?php
-            echo "Fruitje: " . $_SESSION["fruit-diff"] . "<br>";
-            echo "Numpy: " . $_SESSION["numpy-diff"] . "<br>";
+            echo "<p>Fruitje: " . $_SESSION["fruit-diff"] . "</p>";
+            echo "<p>Numpy: " . $_SESSION["numpy-diff"] . "</p><br>";
         ?>
     </div>
 </body>
