@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Reset de sessie voor een nieuwe ronde
     unset($_SESSION['numbers']);
     unset($_SESSION['sum']);
-    header("refresh:5;url=index.php"); // Doorverwijzen naar een nieuwe ronde
+    // header("refresh:5;url=index.php"); // Doorverwijzen naar een nieuwe ronde
 }
 ?>
 <!DOCTYPE html>
@@ -29,16 +29,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controleer je Antwoord</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Numpje-style.css">
 </head>
 <body>
+    <div class="header">
+        <h1>MermoryLane</h1>
+        <ul>
+            <li><a href="index.php">home</a></li>
+        </ul>
+    </div>
     <h1>Wat is de som van de nummers?</h1>
     <form method="post" action="">
         <input type="number" name="userAnswer" required placeholder="Typ je antwoord">
         <button type="submit">Controleren</button>
     </form>
     <?php if (!empty($message)): ?>
-        <div class="message <?php echo ($userAnswer === $_SESSION['sum']) ? '' : 'error'; ?>">
+        <div class="message">
             <?php echo htmlspecialchars($message); ?>
         </div>
     <?php endif; ?>

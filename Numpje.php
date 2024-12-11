@@ -2,7 +2,7 @@
 session_start();
 
 // Functie om willekeurige nummers te genereren
-function generateNumbers($count = 16, $min = 1, $max = 50) {
+function generateNumbers($count = 12, $min = 1, $max = 10) {
     $numbers = [];
     for ($i = 0; $i < $count; $i++) {
         $numbers[] = rand($min, $max);
@@ -10,7 +10,6 @@ function generateNumbers($count = 16, $min = 1, $max = 50) {
     return $numbers;
 }
 
-$wachtTijd = 10;
 
 if ($_SESSION["numpy-diff"] == "easy")
 {
@@ -28,9 +27,6 @@ else
 {
     $wachtTijd = 10;
 }
-
-print_r($wachtTijd);
-
 // Genereer nummers en sla deze op in de sessie
 $numbers = generateNumbers();
 $_SESSION['numbers'] = $numbers;
