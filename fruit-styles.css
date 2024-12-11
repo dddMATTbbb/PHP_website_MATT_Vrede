@@ -55,10 +55,17 @@
 }
 
 .uitleg a button{
-    background-color: lightblue;
-    width: 150%;
-    font-size: 1.5rem;
-    border: solid, blue, 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
 }
 
 .main .resultaten-fruitje{
@@ -70,8 +77,11 @@
 }
 
 .main .resultaten-fruitje input[name="verzend"] {
-    margin-top: 15px;
-    border: solid, 2px, red;
-    background-color: aquamarine;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
