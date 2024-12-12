@@ -94,3 +94,11 @@ button:hover {
     color: darkblue;
     font-size: 40px;
 }
+
+body p[name="correct"]{
+    color: green;
+}
+
+body p[name="incorrect"]{
+    color: red;
+}

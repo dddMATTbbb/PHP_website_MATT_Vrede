@@ -12,9 +12,9 @@ $message = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userAnswer = (int)$_POST['userAnswer'];
     if ($userAnswer === $_SESSION['sum']) {
-        $message = "Correct! De som van de nummers is {$_SESSION['sum']}.";
+        $message = "<p name='correct'>Correct! De som van de nummers is {$_SESSION['sum']}.</p>";
     } else {
-        $message = "Incorrect. Het juiste antwoord was {$_SESSION['sum']}.";
+        $message = "<p name='incorrect'>Incorrect. Het juiste antwoord was {$_SESSION['sum']}.</p>";
     }
 
     // Reset de sessie voor een nieuwe ronde
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     <?php if (!empty($message)): ?>
         <div class="message">
-            <?php echo htmlspecialchars($message); ?>
+            <?php echo ($message); ?>
         </div>
     <?php endif; ?>
 </body>

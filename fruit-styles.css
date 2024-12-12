@@ -76,6 +76,23 @@ button:hover {
     margin-top: 25px;
 }
 
+.main .resultaten-fruitje p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main .resultaten-fruitje p:first-of-type{
+    margin-top: 25px;
+}
+
+.main .resultaten-fruitje p[name="correct"]{
+    color: green;
+    font-weight: bold;
+}
+
+.main .resultaten-fruitje p[name="incorrect"]{
+    color: red;
+}
+
 .main .resultaten-fruitje input[name="verzend"] {
     padding: 10px 20px;
     font-size: 16px;
@@ -84,4 +101,5 @@ button:hover {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 10px;
 }

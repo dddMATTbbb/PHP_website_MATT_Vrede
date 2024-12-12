@@ -34,63 +34,64 @@
                 Aantal Watermeloen: <input type="number" name="userWatermeloen" required /><br>
                 <input type="submit" name="verzend" value="Check" />
             </form>
+            <?php
+                if (isset($_POST["verzend"]))
+                {
+                    $userAppels = $_POST["userAppels"];
+                    $userBananen = $_POST["userBananen"];
+                    $userPeren = $_POST["userPeren"];
+                    $userSinaasappels = $_POST["userSinaasappels"];
+                    $userWatermeloen = $_POST["userWatermeloen"];
+
+                    if ($aantalAppel == $userAppels)
+                    {
+                        echo "<p name='correct'>Appel: correct, jij had: $userAppels echt aantal: $aantalAppel</p>";
+                    }
+                    else
+                    {
+                        echo "<p name='incorrect'>Appel: incorrect, jij had: $userAppels echt aantal: $aantalAppel</p>";
+                    }
+
+                    if($aantalBanaan == $userBananen)
+                    {
+                        echo "<p name='correct'>Banaan: correct, jij had: $userBananen echt aantal: $aantalBanaan</p>";
+                    }
+                    else
+                    {
+                        echo "<p name='incorrect'>Banaan: incorrect, jij had: $userBananen echt aantal: $aantalBanaan</p>";
+                    }
+
+                    if($aantalPeer == $userPeren)
+                    {
+                        echo "<p name='correct'>Peer: correct, jij had: $userPeren echt aantal: $aantalPeer</p>";
+                    }
+                    else
+                    {
+                        echo "<p name='incorrect'>Peer: incorrect, jij had: $userPeren echt aantal: $aantalPeer</p>";
+                    }
+
+                    if($aantalSinaasappel == $userSinaasappels)
+                    {
+                        echo "<p name='correct'>Sinaasappel: correct, jij had: $userSinaasappels echt aantal: $aantalSinaasappel</p>";
+                    }
+                    else
+                    {
+                        echo "<p name='incorrect'>Sinaasappel: incorrect, jij had: $userSinaasappels echt aantal: $aantalSinaasappel</p>";
+                    }
+
+                    if($aantalWatermeloen == $userWatermeloen)
+                    {
+                        echo "<p name='correct'>Sinaasappel: correct, jij had: $userWatermeloen echt aantal: $aantalWatermeloen</p>";
+                    }
+                    else
+                    {
+                        echo "<p name='incorrect'>Sinaasappel: incorrect, jij had: $userWatermeloen echt aantal: $aantalWatermeloen</p>";
+                    }
+                }
+            
+        ?>
         </div>
     </div>
-    <?php
-    if (isset($_POST["verzend"]))
-    {
-        $userAppels = $_POST["userAppels"];
-        $userBananen = $_POST["userBananen"];
-        $userPeren = $_POST["userPeren"];
-        $userSinaasappels = $_POST["userSinaasappels"];
-        $userWatermeloen = $_POST["userWatermeloen"];
 
-        if ($aantalAppel == $userAppels)
-        {
-            echo "Appel: correct, jij had: $userAppels echt aantal: $aantalAppel</p><br>";
-        }
-        else
-        {
-            echo "Appel: incorrect, jij had: $userAppels echt aantal: $aantalAppel<br>";
-        }
-
-        if($aantalBanaan == $userBananen)
-        {
-            echo "Banaan: correct, jij had: $userBananen echt aantal: $aantalBanaan<br>";
-        }
-        else
-        {
-            echo "Banaan: incorrect, jij had: $userBananen echt aantal: $aantalBanaan<br>";
-        }
-
-        if($aantalPeer == $userPeren)
-        {
-            echo "Peer: correct, jij had: $userPeren echt aantal: $aantalPeer<br>";
-        }
-        else
-        {
-            echo "Peer: incorrect, jij had: $userPeren echt aantal: $aantalPeer<br>";
-        }
-
-        if($aantalSinaasappel == $userSinaasappels)
-        {
-            echo "<style>color: green;</style>Sinaasappel: correct, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
-        }
-        else
-        {
-            echo "<style>color: red;</style>Sinaasappel: incorrect, jij had: $userSinaasappels echt aantal: $aantalSinaasappel<br>";
-        }
-
-        if($aantalWatermeloen == $userWatermeloen)
-        {
-            echo "Sinaasappel: correct, jij had: $userWatermeloen echt aantal: $aantalWatermeloen<br>";
-        }
-        else
-        {
-            echo "Sinaasappel: incorrect, jij had: $userWatermeloen echt aantal: $aantalWatermeloen<br>";
-        }
-    }
-    
-    ?>
 </body>
 </html>
